@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+const path = require('path');
+
 /**
  * Implement Gatsby's Node APIs in this file.
  *
@@ -5,8 +8,6 @@
  */
 
 // You can delete this file if you're not using it
-const path = require('path');
-
 exports.onCreateWebpackConfig = function ({ actions }) {
     actions.setWebpackConfig({
         resolve: {

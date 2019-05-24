@@ -20,9 +20,13 @@ module.exports = {
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'gatsby-starter-default',
+        // eslint-disable-next-line @typescript-eslint/camelcase
         short_name: 'starter',
+        // eslint-disable-next-line @typescript-eslint/camelcase
         start_url: '/',
+        // eslint-disable-next-line @typescript-eslint/camelcase
         background_color: '#663399',
+        // eslint-disable-next-line @typescript-eslint/camelcase
         theme_color: '#663399',
         display: 'minimal-ui',
         icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
@@ -30,9 +34,8 @@ module.exports = {
     },
     'gatsby-plugin-preact',
     'gatsby-plugin-styled-components',
-    'gatsby-plugin-webpack-bundle-analyser-v2'
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // 'gatsby-plugin-offline',
+    'gatsby-plugin-webpack-bundle-analyser-v2',
+    'gatsby-plugin-offline',
+    'gatsby-plugin-layout'
   ],
 }

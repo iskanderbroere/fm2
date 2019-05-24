@@ -13,8 +13,25 @@
 
 import styled, { css } from "styled-components"
 import { Link } from "gatsby"
+import FrontmenDiamond from "@/images/frontmen-diamond.svg"
 
-const BadgeLink = styled(Link)`
+interface SvgRatioMixin {
+    width?: number
+}
+const svgRatioMixin = css<SvgRatioMixin>`
+  width: ${({ width = 200 }) => width}px;
+  height: ${({ width = 200 }) => (392 / (288 / width))}px;
+`
+interface BadgeLinkProps {
+    fill?: string
+}
+
+const BadgeLink = styled(Link)<BadgeLinkProps>`
+    background-image: url(${FrontmenDiamond});
+    fill: ${({ fill = "red" }) => fill};
+    ${svgRatioMixin}
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
