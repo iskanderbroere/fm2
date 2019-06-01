@@ -14,7 +14,7 @@ interface SEOProps extends HelmetProps {
   lang?: string
 }
 
-const SEO: FunctionComponent<SEOProps> = ({ description, lang = "en", meta, title }: SEOProps) => {
+const SEO: FunctionComponent<SEOProps> = ({ description, lang = "en", meta = [], title }: SEOProps) => {
   const { site } = useStaticQuery(
     graphql`
       query {
