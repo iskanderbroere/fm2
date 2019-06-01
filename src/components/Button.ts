@@ -13,8 +13,10 @@ export default styled.a<{ primary: boolean }>`
 
   /* The GitHub button is a primary button
    * edit this to target it specifically! */
-  ${props => props.primary && css`
-    background: white;
-    color: palevioletred;
-  `}
+  ${({ primary }) =>
+    primary &&
+    css`
+      background: white;
+      color: palevioletred;
+    `}
 `
