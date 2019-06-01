@@ -50,7 +50,12 @@ module.exports = {
       },
     },
     "gatsby-plugin-preact",
-    "gatsby-plugin-styled-components",
+    {
+      resolve: "gatsby-plugin-styled-components",
+      options: {
+        pure: true,
+      },
+    },
     "gatsby-plugin-webpack-bundle-analyser-v2",
     "gatsby-plugin-offline",
     "gatsby-plugin-layout",
